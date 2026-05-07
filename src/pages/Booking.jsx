@@ -31,17 +31,16 @@ const buildMapEmbedUrl = (pickupCoords, dropCoords) => {
 
 const VEHICLES_BY_CATEGORY = {
   passenger: [
-    { id: "sedan", emoji: "🚗", name: "City Sedan", detail: "4 seats • AC • GPS", price: 350, perKm: 12, image: "https://images.unsplash.com/photo-1549399542-7e3f8b79c341?w=900&q=80" },
+    { id: "sedan", emoji: "🚗", name: "Muruti Swift", detail: "4 seats • AC • GPS", price: 350, perKm: 12, image: "https://www.popularmaruti.com/blog/wp-content/uploads/2023/01/avtomobili-suzuki-1115280-scaled.jpg" },
     { id: "suv", emoji: "🚙", name: "Premium SUV", detail: "6 seats • AC • Premium", price: 600, perKm: 18, image: "https://images.unsplash.com/photo-1519641471654-76ce0107ad1b?w=900&q=80" },
-    { id: "auto", emoji: "🛺", name: "Auto Rickshaw", detail: "3 seats • Budget", price: 120, perKm: 8, image: "https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=900&q=80" },
-    { id: "luxury", emoji: "🚘", name: "Luxury Car", detail: "4 seats • Wi-Fi • VIP", price: 900, perKm: 30, image: "https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=900&q=80" },
-    { id: "bike", emoji: "🏍️", name: "Moto Ride", detail: "1 seat • Fastest", price: 80, perKm: 5, image: "https://images.unsplash.com/photo-1558981806-ec527fa84c39?w=900&q=80" },
+    { id: "auto", emoji: "🛺", name: "Innova  crysta", detail: "7 seats • Budget", price: 1200, perKm: 8, image: "https://fortune-toyota.com/wp-content/uploads/2025/07/toyota-innova-copy.webp" },
+    { id: "luxury", emoji: "🚘", name: "Wagon R", detail: "4 seats • Wi-Fi • VIP", price: 300, perKm: 30, image: "https://stimg.cardekho.com/images/carexteriorimages/930x620/Maruti/Wagon-R-tour/9442/1762863641169/front-left-side-47.jpg" },
   ],
   goods: [
     { id: "mini-truck", emoji: "🚛", name: "Mini Truck", detail: "500 kg • City", price: 500, perKm: 20, image: "https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?w=900&q=80" },
     { id: "tempo", emoji: "🚚", name: "Tempo / Ace", detail: "1 Ton • Business", price: 400, perKm: 15, image: "https://images.unsplash.com/photo-1494412651409-8963ce7935a7?w=900&q=80" },
     { id: "large-truck", emoji: "🏗️", name: "Large Truck", detail: "5 Tons • Intercity", price: 1500, perKm: 40, image: "https://images.unsplash.com/photo-1616432043562-3671ea2e5242?w=900&q=80" },
-    { id: "bike-delivery", emoji: "📦", name: "Bike Delivery", detail: "10 kg • Express", price: 100, perKm: 6, image: "https://images.unsplash.com/photo-1517649763962-0c623066013b?w=900&q=80" },
+   
   ],
 };
 
