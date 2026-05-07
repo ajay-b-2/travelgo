@@ -257,6 +257,7 @@ const menuItemStyle = {
 function Navbar({ navigate }) {
   const user = JSON.parse(localStorage.getItem("user") || "{}");
   const [menuOpen, setMenuOpen] = useState(false);
+  const [profileOpen, setProfileOpen] = useState(false);
 
   const handleLogout = () => {
     localStorage.removeItem("user");
@@ -267,7 +268,54 @@ function Navbar({ navigate }) {
     <nav className="navbar">
       <div className="nav-logo">TravelGo</div>
 
-      {/* ☰ Hamburger */}
+      {/* 💻 Desktop Nav */}
+      <ul className="nav-links">
+        <li><a href="#vehicles">Vehicles</a></li>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#how">How It Works</a></li>
+        <li>
+          <button onClick={() => navigate("/my-bookings")}>
+            My Bookings
+          </button>
+        </li>
+
+        {/* 👤 Profile */}
+        <li style={{ position: "relative" }}>
+          <div
+            onClick={() => setProfileOpen(!profileOpen)}
+            style={{
+              display: "flex",
+              alignItems: "center",
+              gap: "0.5rem",
+              cursor: "pointer"
+            }}
+          >
+            <div className="avatar">
+              {(user.name || "T")[0].toUpperCase()}
+            </div>
+            <span className="username">
+              {user.name || "Traveller"}
+            </span>
+          </div>
+
+          {/* Dropdown */}
+          {profileOpen && (
+            <div className="profile-dropdown">
+              <button onClick={() => navigate("/profile")}>
+                ⚙ Settings
+              </button>
+
+              <div className="menu-divider"></div>
+
+              <button onClick={handleLogout} style={{ color: "red" }}>
+               ➜] Logout
+              </button>
+            </div>
+          )}
+        </li>
+      </ul>
+
+      {/* 📱 Mobile Hamburger */}
       <button
         className="hamburger"
         onClick={() => setMenuOpen(!menuOpen)}
@@ -275,8 +323,8 @@ function Navbar({ navigate }) {
         ☰
       </button>
 
-      {/* Mobile Menu (ONLY settings + logout) */}
-  {menuOpen && (
+      {/* 📱 Mobile Menu */}
+    {menuOpen && (
   <div className="mobile-menu">
     
     <button

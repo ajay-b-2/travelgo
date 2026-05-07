@@ -1584,6 +1584,69 @@ button.location-suggestion-item:hover {
 
 /*njn add akiyath*/
 
+/* Default (Desktop) */
+.nav-links {
+  display: flex;
+  gap: 1rem;
+}
+
+.hamburger {
+  display: none;
+}
+
+/* 📱 Mobile View */
+@media (max-width: 768px) {
+
+  /* Hide desktop menu */
+  .nav-links {
+    display: none;
+  }
+
+  /* Show hamburger */
+  .hamburger {
+    display: block;
+    font-size: 1.6rem;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+  }
+
+  /* Mobile dropdown */
+  .mobile-menu {
+    position: absolute;
+    top: 60px;
+    right: 10px;
+    background: #111;
+    border-radius: 10px;
+    padding: 10px;
+    width: 160px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .mobile-menu button {
+    background: none;
+    border: none;
+    color: white;
+    text-align: left;
+    padding: 10px;
+    cursor: pointer;
+  }
+
+  .mobile-menu button:hover {
+    background: rgba(255,255,255,0.1);
+  }
+
+  .menu-divider {
+    height: 1px;
+    background: rgba(0, 0, 0, 0.2);
+    margin: 6px 0;
+  }
+}
+
+
+
 .hamburger {
   font-size: 1.5rem;
   background: none;
@@ -1619,9 +1682,93 @@ button.location-suggestion-item:hover {
 .mobile-menu button:hover {
   background: rgba(255,255,255,0.1);
 }
+
+
+/* Avatar */
+.avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: linear-gradient(135deg,#e94560,#f5a623);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+.username {
+  font-size: 0.9rem;
+  color: rgba(255,255,255,0.7);
+}
+
+/* Profile dropdown */
+.profile-dropdown {
+  position: absolute;
+  top: 45px;
+  right: 0;
+  background: #fff0f0;
+  border-radius: 8px;
+  width: 150px;
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+}
+
+.profile-dropdown button {
+  background: none;
+  border: none;
+  color: white;
+  text-align: left;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.profile-dropdown button:hover {
+  background: rgba(255,255,255,0.1);
+}
+
+/* Divider */
 .menu-divider {
   height: 1px;
   background: rgba(0, 0, 0, 0.2);
   margin: 5px 0;
-  
+}
+
+/* Desktop */
+.nav-links {
+  display: flex;
+  gap: 1rem;
+}
+
+/* Hide hamburger on desktop */
+.hamburger {
+  display: none;
+}
+
+/* 📱 Mobile */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+
+  .hamburger {
+    display: block;
+    font-size: 1.6rem;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+  }
+
+  .mobile-menu {
+    position: absolute;
+    top: 60px;
+    right: 10px;
+    background: #ebebeb;
+    border-radius: 10px;
+    padding: 10px;
+    width: 160px;
+    display: flex;
+    flex-direction: column;
+  }
 }
